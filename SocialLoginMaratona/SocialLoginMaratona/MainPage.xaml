@@ -2,9 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:SocialLoginMaratona"
-             x:Class="SocialLoginMaratona.MainPage">
+             x:Class="SocialLoginMaratona.MainPage"
+             Title="Main Page">
+    <ScrollView>
+        <StackLayout
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand">
+            <Label Text="Id do usuário" TextColor="Black" FontSize="Small"/>
+            <Label Text="{Binding UserId}" TextColor="Gray" FontSize="Medium"/>
+            <Label Text="Token do usuario" TextColor="Black" FontSize="Small"/>
+            <Label Text="{Binding Token}" TextColor="Gray" FontSize="Medium"/>
+        </StackLayout>
+    </ScrollView>
 
-    <StackLayout
+    <!--<StackLayout
         HorizontalOptions="Center"
         VerticalOptions="CenterAndExpand">
         <Button Text="Logar com Facebook"
@@ -16,6 +27,6 @@
         <Label TextColor="Black"
                FontSize="Medium"
                x:Name="InfoLabel"/>
-    </StackLayout>
+    </StackLayout>-->
 
 </ContentPage>

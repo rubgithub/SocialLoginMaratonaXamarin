@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SocialLoginMaratona.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,8 @@ namespace SocialLoginMaratona
         {
             InitializeComponent();
 
-            MainPage = new SocialLoginMaratona.MainPage();
+            //MainPage = new SocialLoginMaratona.MainPage();
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

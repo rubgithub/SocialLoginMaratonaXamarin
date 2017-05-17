@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SocialLoginMaratona.Views.LoginPage"
+             Title="{Binding Title}"
+             >
+
+    <StackLayout
+        HorizontalOptions="Center"
+        VerticalOptions="CenterAndExpand">
+        <Label Text="Meu app Social" TextColor="Black" FontSize="Medium"/>
+        <Button Command="{Binding LoginCommand}"
+            Text="Logar com Facebook"
+                BackgroundColor="Blue"
+                FontSize="Medium"
+                TextColor="White"/>
+    </StackLayout>
+
+</ContentPage>
