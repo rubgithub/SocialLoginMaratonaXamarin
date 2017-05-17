@@ -12,7 +12,7 @@ namespace SocialLoginMaratona.Droid.Authentication
 {
     public class AuthenticationService : IAuthentication
     {
-        public async Task<MobileServiceUser> LoginAsync(MobileServiceClient client, MobileServiceAuthenticationProvider provider, IDictionary<string, string> parameters = null)
+        public async Task<MobileServiceUser> Authenticate(MobileServiceClient client, MobileServiceAuthenticationProvider provider, IDictionary<string, string> parameters = null)
         {
             try
             {
@@ -26,7 +26,7 @@ namespace SocialLoginMaratona.Droid.Authentication
             catch (Exception)
             {
                 //TODO: LogError
-                throw;
+                return null;
             }
         }
     }

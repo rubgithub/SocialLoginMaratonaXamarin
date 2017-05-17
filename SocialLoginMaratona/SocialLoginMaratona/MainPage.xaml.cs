@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SocialLoginMaratona.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,9 +10,17 @@ namespace SocialLoginMaratona
 {
     public partial class MainPage : ContentPage
     {
+        readonly AzureService azureService = new AzureService();
         public MainPage()
         {
             InitializeComponent();
+
+            LoginButton.Clicked += async (sender, args) =>
+            {
+                var user = await azureService.LoginAsync();
+                InfoLabel.Text = (user != null) ? $"Bem vindo: {user.UserId}" :
+                "Falha no login, tente novamente";
+            };
         }
     }
 }

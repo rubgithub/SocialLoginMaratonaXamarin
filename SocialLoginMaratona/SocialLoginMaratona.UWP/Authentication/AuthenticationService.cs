@@ -11,7 +11,7 @@ namespace SocialLoginMaratona.UWP.Authentication
 {
     public class AuthenticationService : IAuthentication
     {
-        public async Task<MobileServiceUser> LoginAsync(MobileServiceClient client, MobileServiceAuthenticationProvider provider, IDictionary<string, string> parameters = null)
+        public async Task<MobileServiceUser> Authenticate(MobileServiceClient client, MobileServiceAuthenticationProvider provider, IDictionary<string, string> parameters = null)
         {
             try
             {
@@ -25,7 +25,7 @@ namespace SocialLoginMaratona.UWP.Authentication
             catch (Exception)
             {
                 //TODO: LogError
-                throw;
+                return null;
             }
         }
     }
