@@ -10,7 +10,7 @@ namespace SocialLoginMaratona.Service
     public class AzureService
     {
         //TODO: refatorar de acordo cm PDFs
-        static readonly string AppUrl = "http://rub-maratona-xamarin-intermediario.azurewebsites.net";
+        static readonly string AppUrl = "url-azure";
         public MobileServiceClient Client { get; set; } = null;
 
         public void Initialize()
